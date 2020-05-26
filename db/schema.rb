@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_192332) do
   create_table "tyrants", force: :cascade do |t|
     t.string "name"
     t.string "bio"
-    t.string "eonomics_policy"
+    t.string "economics_policy"
     t.string "social_policy"
     t.string "warmongering_policy"
     t.datetime "created_at", precision: 6, null: false
