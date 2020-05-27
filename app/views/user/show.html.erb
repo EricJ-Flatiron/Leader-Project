@@ -1,0 +1,10 @@
+<h1>User Showpage</h1>
+<br>
+<%=@user.name%>
+<br>
+<h3>User Comments Sections</h3>
+<%@user.comments.each do |c|%>
+    <%= Tyrant.find(c.tyrant_id).name %>
+    <%= c.comments%>
+    <br>
+<% end %>
