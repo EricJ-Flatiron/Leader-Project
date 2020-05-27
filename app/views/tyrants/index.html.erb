@@ -4,7 +4,7 @@
 <ul>
 <%@tyrants.each do |t|%>
     <li>
-    <h3><%=t.name.capitalize%> </h3>
+    <h3><%=link_to t.name.capitalize, tyrant_path(t)%> </h3>
     <%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
     <br>
 
