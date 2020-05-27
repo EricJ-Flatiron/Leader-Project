@@ -49,8 +49,8 @@ class TyrantsController < ApplicationController
         @tyrant = Tyrant.find(params[:id])
     end
 
-    def tyrant_params
-        params.require(:tyrant).permit(:name, :bio, :economics_policy, :warmongering_policy, :social_policy)
-    end
+    # def tyrant_params
+    #     params.require(:tyrant).permit(:name, :bio, :economics_policy, :warmongering_policy, :social_policy)
+    # end
 
 end

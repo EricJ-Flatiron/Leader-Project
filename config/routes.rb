@@ -12,23 +12,11 @@ Rails.application.routes.draw do
   get "/tyrants", to: "tyrants#index"
   get '/', to: "tyrants#index"
   get "/tyrants/:id", to: "tyrants#show" do
-<<<<<<< HEAD
    post "/ratings", to: "ratings#create"
    post "/comments", to: "comments#create"
   end
   #  get "/tyrants/:id/edit", to: "tyrants#edit", as: "tyrant"
   #  patch "/tyrants/:id", to: "tyrants#update" 
 end
-=======
-    post "/ratings", to: "ratings#create"
-    post "/comments", to: "comments#create"
-  end
-  
-
- 
-
-
-
->>>>>>> bc7a528d094889485e84236dc0853ee53f98e115
   # Need to create custom route for homepage to be index of tyrants display page
 
