@@ -4,8 +4,13 @@
 <ul>
 <%@tyrants.each do |t|%>
     <li>
+<<<<<<< HEAD
     <h3><%=link_to t.name.capitalize, tyrants_path(t)%> </h3>
     <%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
+=======
+    <h3><%=t.name.capitalize%> </h3>
+    <%= image_tag (src=(url_for(t.avatar))),width:"300px"%>
+>>>>>>> 707610e494c42f167f9f3e309e0090b0ec3cbbf7
     <br>
 
     <label>Average Economics Rating: </label>

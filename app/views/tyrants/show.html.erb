@@ -1,4 +1,5 @@
 <h1><%=@tyrant.name%></h1>
+<<<<<<< HEAD
 <%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
 <br>
 
@@ -10,38 +11,48 @@
 <li>Charisma: </li> <%=@tyrant.avg_charisma_rating%>
 <li>Economic: </li> <%=@tyrant.avg_economics_rating%>
 </ul>
+=======
+
+<% if @tyrant.avatar.attached? %>
+<%= image_tag (src=(url_for(@tyrant.avatar))),width:"300px"%>
+<%end%>
+>>>>>>> 707610e494c42f167f9f3e309e0090b0ec3cbbf7
 
 <%= form_with model:@rating do |f|%>
+
+<label>Appearance Rating </label>
 <%= f.number_field :appearance_rating%>
-<%= f.label :Appearance_Rating%>
+
 
 <br/>
+
+
 
 <label>Bio: <%= simple_format @tyrant.bio%></label> 
 <br>
 
-<label>Economics Policy: <%= @tyrant.economics_policy%></label>
+<label>Economics Policy: </label>
+ <%= @tyrant.economics_policy%>
 <br/>
-
-<%= f.label :economics_rating.capitalize%>
+<label>Economics Rating </label>
 <%= f.number_field :economics_rating%>
-<br>
-
-<br/>
+<br/> <br/>
 <label>Social Policy: <%= @tyrant.social_policy%></label>
 <br/>
+<label>Social Rating </label>
 <%= f.number_field :social_rating%>
-<%= f.label :Social_Rating%>
+<br/>
 <br/>
 <label>Warmongering Policy: <%= @tyrant.warmongering_policy%></label>
 <br/>
+<label>Warmongering Rating </label>
 <%= f.number_field :warmongering_rating%>
-<%= f.label :Warmongering_Rating%>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<label>Charisma Rating </label>
 <%= f.number_field :charisma_rating%>
-<%= f.label :Charisma_Rating%>
+
 <br/>
 <%= f.collection_select :user_id,@user,:id,:name%>
 <br/>
@@ -65,8 +76,9 @@
 
 <ul>
 <%@tyrant.comments.each do |x|%>
-
+<li>
  <%=x.comments%>
+ </li>
  <%end%>
  </ul>
 

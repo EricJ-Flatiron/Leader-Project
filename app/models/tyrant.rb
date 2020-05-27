@@ -3,6 +3,7 @@ class Tyrant < ApplicationRecord
     has_many :users, through: :ratings
     has_many :comments
     has_many :users, through: :comments
+    has_one_attached :avatar
 
     def avg_appearance_rating
         sum = 0
