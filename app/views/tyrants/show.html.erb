@@ -32,7 +32,7 @@
 <br/>
 <%= f.collection_select :user_id,@user,:id,:name%>
 <br/>
-<%= f.collection_select :tyrant_id,@tyrants,:id,:name%>
+<%= f.hidden_field :tyrant_id,:value => @tyrant.id%>
 <br/>
 <%= f.submit%>
 <%end%>
@@ -44,7 +44,7 @@
 <%= f.text_area :comments%><br/>
 <%= f.collection_select :user_id,@user,:id,:name%>
 <br/>
-<%= f.collection_select :tyrant_id,@tyrants,:id,:name%>
+<%= f.hidden_field :tyrant_id,:value => @tyrant.id%>
 <br/>
 <%= f.submit%>
 <%end%>
