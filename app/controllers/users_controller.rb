@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     before_action :current_user, only: [:show, :edit, :update, :destroy]
 
     def show
+        @tyrants = Tyrant.all
     end
 
     def new
