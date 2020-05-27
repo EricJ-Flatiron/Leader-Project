@@ -1,4 +1,48 @@
-<h1><%=@tyrant.name%><h1>
+<h1><%=@tyrant.name%></h1>
 <%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
+<%= form_with model:@rating do |f|%>
+<%= f.number_field :appearance_rating%>
+<%= f.label :Appearance_Rating%>
+
+<br/>
+
+<label>Bio: <%= simple_format @tyrant.bio%></label> 
+
+
+<label>Economics Policy: <%= @tyrant.economics_policy%></label>
+<br/>
+
+<%= f.number_field :economics_rating%>
+<%= f.label :Economics_Rating%>
+<br/>
+<label>Social Policy: <%= @tyrant.social_policy%></label>
+<br/>
+<%= f.number_field :social_rating%>
+<%= f.label :Social_Rating%>
+<br/>
+<label>Warmongering Policy: <%= @tyrant.warmongering_policy%></label>
+<br/>
+<%= f.number_field :warmongering_rating%>
+<%= f.label :Warmongering_Rating%>
+<br/>
+<br/>
+
+<%= f.number_field :charisma_rating%>
+<%= f.label :Charisma_Rating%>
+<br/>
+<%= f.collection_select :user_id,@user,:id,:name%>
+<br/>
+<%= f.collection_select :tyrant_id,@tyrants,:id,:name%>
+<%= f.submit%>
+
+<%end%>
+
+
+
+
+
+ 
+
+
 
 
