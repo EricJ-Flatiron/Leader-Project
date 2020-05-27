@@ -15,7 +15,7 @@ class TyrantsController < ApplicationController
     end
 
     def new
-
+        @tyrant = Tyrant.new
     end
 
     def create

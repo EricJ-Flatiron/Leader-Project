@@ -7,9 +7,18 @@ class UsersController < ApplicationController
     end
 
     def new
+        @user = User.new
     end
 
     def create
+        user = User.create(user_params)
+        if user.valid?
+            user.save
+            redirect_to user
+        else
+            flash[:errors] = user.errors.full_messages 
+            redirect_to "/users/new"
+        end
     end
 
     def edit
@@ -25,6 +34,10 @@ class UsersController < ApplicationController
 
     def current_user
         @user = User.find(params[:id])
+    end
+
+    def user_params
+        params.require(:user).permit(:name)
     end
 
 end
