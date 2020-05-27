@@ -1,8 +1,22 @@
 <h1><%=@tyrant.name%></h1>
+<<<<<<< HEAD
+<%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
+<br>
+
+<h3>Average Ratings:</h3>
+<ul>
+<li>Warmongering: </li> <%=@tyrant.avg_warmongering_rating%>
+<li>Appearance: </li> <%=@tyrant.avg_appearance_rating%>
+<li>Social: </li> <%=@tyrant.avg_social_rating%>
+<li>Charisma: </li> <%=@tyrant.avg_charisma_rating%>
+<li>Economic: </li> <%=@tyrant.avg_economics_rating%>
+</ul>
+=======
 
 <% if @tyrant.avatar.attached? %>
 <%= image_tag (src=(url_for(@tyrant.avatar))),width:"300px"%>
 <%end%>
+>>>>>>> 707610e494c42f167f9f3e309e0090b0ec3cbbf7
 
 <%= form_with model:@rating do |f|%>
 
