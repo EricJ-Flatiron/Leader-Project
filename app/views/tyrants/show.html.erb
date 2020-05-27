@@ -14,6 +14,8 @@
 
 <label>Bio:<%= simple_format @tyrant.bio%></label> 
 
+<label>Bio: <%= simple_format @tyrant.bio%></label> 
+<br>
 
 <label>Economics Policy: </label>
  <%= @tyrant.economics_policy%>
@@ -24,6 +26,11 @@
 
 <!--<%= f.number_field :economics_rating%>
 <%= f.label :Economics_Rating%>-->
+
+<%= f.label :economics_rating.capitalize%>
+<%= f.number_field :economics_rating%>
+<br>
+
 <br/>
 <label>Social Policy: <%= @tyrant.social_policy%></label>
 <br/>
