@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   get "/ratings", to: "ratings#index"
   post "/ratings", to: "ratings#create"
   get "/tyrants", to: "tyrants#index"
+  get '/', to: "tyrants#index"
   get "/tyrants/:id", to: "tyrants#show" do
-   post "/ratings", to: "ratings#create"
-   post "/comments", to: "comments#create"
-end
+    post "/ratings", to: "ratings#create"
+    post "/comments", to: "comments#create"
+  end
   
 
  
