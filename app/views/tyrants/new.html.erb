@@ -1,0 +1,30 @@
+<% if flash[:errors]%>
+    <% flash[:errors].each do |e| %>
+        <li style="color: red">
+            <%= e %>
+        </li>
+    <%end%>
+<%end%>
+
+<%= form_with model:@movie do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br/>
+<%= f.label :bio %>
+<%= f.text_area :bio %>
+<br/>
+<%= f.label :economics_policy %>
+<%= f.text_area :economics_policy %>
+<br/>
+<%= f.label :warmongering_policy %>
+<%= f.text_area :warmongering_policy %>
+<br/>
+<%= f.label :social_policy %>
+<%= f.text_area :social_policy %>
+<br/>
+<%= f.label :Tyrant_Picture%>
+<%= f.file_field :avatar%>
+<br/>
+<%= f.submit %>
+
+<%end%>
