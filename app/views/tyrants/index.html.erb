@@ -1,0 +1,34 @@
+<h1>Tyrant's Parking Lot</h1>
+<br>
+<!-- Iterate through all the Tyrants -->
+<ul>
+<%@tyrants.each do |t|%>
+    <li>
+    <h3><%=t.name.capitalize%> </h3>
+    <%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
+    <br>
+
+    <label>Average Economics Rating: </label>
+    <%=t.average_economics_rating%>
+    <br>
+
+    <label>Average Social Rating: </label>
+    <%=t.average_social_rating%>
+    <br>
+
+    <label>Average Warmongering Rating: </label>
+    <%=t.average_warmongering_rating%>
+    <br>
+
+    <label>Average Charisma Rating: </label>
+    <%=t.average_charisma_rating%>
+    <br>
+
+    <label>Average Appearance Rating: </label>
+    <%=t.average_appearance_rating%>
+    <br>
+    
+    
+    </li>
+<%end%>
+</ul>
