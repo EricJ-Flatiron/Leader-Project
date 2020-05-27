@@ -7,10 +7,8 @@ class TyrantsController < ApplicationController
         @rating = Rating.new
         @user = User.all
         @tyrants = Tyrant.all
-        
-    
-        
-    end
+        @comment = Comment.new
+     end
 
     def index
         @tyrants = Tyrant.all

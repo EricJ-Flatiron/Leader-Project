@@ -5,12 +5,16 @@ Rails.application.routes.draw do
   # Standard resources and paths. Tyrants has all functions, Users can't be shown in index.
   # resources :tyrants
   resources :users, only: [:show, :new, :create, :edit, :update, :destroy]
+  get "/comments", to: "comments#index"
+  post "/comments", to: "comments#create"
   get "/ratings", to: "ratings#index"
-post "/ratings", to: "ratings#create"
+  post "/ratings", to: "ratings#create"
   get "/tyrants", to: "tyrants#index"
   get "/tyrants/:id", to: "tyrants#show" do
    post "/ratings", to: "ratings#create"
+   post "/comments", to: "comments#create"
 end
+  
 
  
 

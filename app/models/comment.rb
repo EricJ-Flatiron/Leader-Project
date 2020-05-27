@@ -4,5 +4,5 @@ class Comment < ApplicationRecord
 
     validates :user_id, presence: true
     validates :tyrant_id, presence: true
-    validates :comments, length: { greater_than: 10 }
+    validates :comments, length: { greater_than: 2 }
 end

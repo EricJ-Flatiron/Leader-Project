@@ -33,9 +33,29 @@
 <%= f.collection_select :user_id,@user,:id,:name%>
 <br/>
 <%= f.collection_select :tyrant_id,@tyrants,:id,:name%>
+<br/>
 <%= f.submit%>
-
 <%end%>
+<br/>
+
+
+<%= form_with model:@comment do |f|%><br/>
+<%= f.label :Comments%><br/>
+<%= f.text_area :comments%><br/>
+<%= f.collection_select :user_id,@user,:id,:name%>
+<br/>
+<%= f.collection_select :tyrant_id,@tyrants,:id,:name%>
+<br/>
+<%= f.submit%>
+<%end%>
+
+
+<ul>
+<%@tyrant.comments.each do |x|%>
+
+ <%=x.comments%>
+ <%end%>
+ </ul>
 
 
 
