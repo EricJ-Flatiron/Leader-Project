@@ -5,7 +5,7 @@
 <%@tyrants.each do |t|%>
     <li>
     <h3><%=t.name.capitalize%> </h3>
-    <%= image_tag("tyrant_pic/nightking.jpg",width:"300px") %>
+    <%= image_tag (src=(url_for(t.avatar))),width:"300px"%>
     <br>
 
     <label>Average Economics Rating: </label>
