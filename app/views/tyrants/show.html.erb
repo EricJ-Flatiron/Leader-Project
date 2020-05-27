@@ -12,7 +12,7 @@
 
 <br/>
 
-<label>Bio:<%= simple_format @tyrant.bio%></label> 
+
 
 <label>Bio: <%= simple_format @tyrant.bio%></label> 
 <br>
@@ -22,20 +22,12 @@
 <br/>
 <label>Economics Rating </label>
 <%= f.number_field :economics_rating%>
-<br>
-
-<!--<%= f.number_field :economics_rating%>
-<%= f.label :Economics_Rating%>-->
-
-<%= f.label :economics_rating.capitalize%>
-<%= f.number_field :economics_rating%>
-<br>
-
-<br/>
+<br/> <br/>
 <label>Social Policy: <%= @tyrant.social_policy%></label>
 <br/>
 <label>Social Rating </label>
 <%= f.number_field :social_rating%>
+<br/>
 <br/>
 <label>Warmongering Policy: <%= @tyrant.warmongering_policy%></label>
 <br/>
