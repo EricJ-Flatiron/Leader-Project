@@ -150,11 +150,31 @@ user: u5, tyrant: t4)
 r5 = Rating.create(appearance_rating: 5,economics_rating: 5, 
 social_rating: 5, warmongering_rating:5, charisma_rating: 5,
 user: u4, tyrant: t5)
+r6 = Rating.create(appearance_rating: 4,economics_rating: 3, 
+social_rating: 5, warmongering_rating:3, charisma_rating: 3,
+user: u4, tyrant: t6)
+r7 = Rating.create(appearance_rating: 4,economics_rating: 4, 
+social_rating: 3, warmongering_rating:5, charisma_rating: 2,
+user: u3, tyrant: t7)
+r8 = Rating.create(appearance_rating: 4,economics_rating: 3, 
+social_rating: 5, warmongering_rating:3, charisma_rating: 3,
+user: u2, tyrant: t8)
+r9 = Rating.create(appearance_rating: 2,economics_rating: 2, 
+social_rating: 1, warmongering_rating:2, charisma_rating: 3,
+user: u5, tyrant: t9)
+r10 = Rating.create(appearance_rating: 5,economics_rating: 5, 
+social_rating: 5, warmongering_rating:5, charisma_rating: 5,
+user: u4, tyrant: t10)
 
 c1 = Comment.create(comments:"Dang that boy Zuko go it!",user: u1, tyrant:t1)
 c2 = Comment.create(comments:"This dude sucks",user: u2, tyrant:t2)
 c3 = Comment.create(comments:"He died too young",user: u3, tyrant:t3)
 c4 = Comment.create(comments:"He got what he deserved!",user: u4, tyrant:t4)
 c5 = Comment.create(comments:"He is stone cold!",user: u5, tyrant:t5)
+c6 = Comment.create(comments:"DARN UUU SAMURAIII JAAAACK",user: u1, tyrant:t6)
+c7 = Comment.create(comments:"THE KRABBY PATTY FORMULA SHALL BE MINE",user: u2, tyrant:t7)
+c8 = Comment.create(comments:"We will watch your career with great interest.",user: u3, tyrant:t8)
+c9 = Comment.create(comments:"This dude needs rehab.",user: u4, tyrant:t9)
+c10 = Comment.create(comments:"Literally just an eye that can't do shit without a ring. Come on, bro.",user: u5, tyrant:t10)
 
    

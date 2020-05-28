@@ -13,22 +13,17 @@
 <li>Charisma: </li> <%=@tyrant.avg_charisma_rating%>
 <li>Economic: </li> <%=@tyrant.avg_economics_rating%>
 </ul>
-
-
-
-<%= form_with model:@rating do |f|%>
-
-<label>Appearance Rating </label>
-<%= f.number_field :appearance_rating%>
-
-
-<br/>
-
-
-
-<label>Bio: <%= simple_format @tyrant.bio%></label> 
 <br>
 
+
+<label>Put in your own rating for this Tyrant!</label>
+<%= form_with model:@rating do |f|%>
+<br/>
+<label>Bio: <%= simple_format @tyrant.bio%></label> 
+<br>
+<label>Appearance Rating </label>
+<%= f.number_field :appearance_rating%>
+<br>
 <label>Economics Policy: </label>
  <%= @tyrant.economics_policy%>
 <br/>
@@ -45,12 +40,10 @@
 <br/>
 <label>Warmongering Rating </label>
 <%= f.number_field :warmongering_rating%>
-
 <br/>
 <br/>
 <label>Charisma Rating </label>
 <%= f.number_field :charisma_rating%>
-
 <br/>
 <%= f.collection_select :user_id,@user,:id,:name%>
 <br/>
@@ -60,7 +53,7 @@
 <%end%>
 <br/>
 
-
+<label>Leave a comment about this Tyrant:</label>
 <%= form_with model:@comment do |f|%><br/>
 <%= f.label :Comments%><br/>
 <%= f.text_area :comments%><br/>
@@ -70,8 +63,8 @@
 <br/>
 <%= f.submit%>
 <%end%>
-
-
+<br>
+<label>View all comments already made for this Tyrant</label>
 <ul>
 <%@tyrant.comments.each do |x|%>
 <li>
