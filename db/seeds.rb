@@ -10,11 +10,11 @@ Tyrant.destroy_all
 Rating.destroy_all
 Comment.destroy_all
 
-u1 = User.create(name:"Eric")
-u2 = User.create(name:"Luis")
-u3 = User.create(name:"Cole")
-u4 = User.create(name:"Edwin")
-u5 = User.create(name:"Phyllis")
+u1 = User.create(name:"Eric", password: "asdf")
+u2 = User.create(name:"Luis", password: "fdsa")
+u3 = User.create(name:"Cole", password: "qwer")
+u4 = User.create(name:"Edwin", password: "rewq")
+u5 = User.create(name:"Phyllis", password: "tyui")
 
 t1 = Tyrant.create(name:"Fire Lord Zuko",
 bio:"He was banishededeem hi by his father, Firelord Ozai and sought to 
@@ -73,6 +73,68 @@ social_policy: "Humans must die!",
 warmongering_policy: "Kill all the humans!"
 )
 
+t6 = Tyrant.create(name:"Aku",
+bio:"A shapeshifting demon from long ago, Aku sends the protagonist,
+ a Samurai Jack to the future before he could land a killing blow. In 
+ the distant future, Aku reigns supreme on the planet Earth.",
+economics_policy: "Fairly frugal with his economic practices. He seems to
+allow different sets of humans and other species to rule amongst themselves
+economically. Aku is sure to take a piece of each slice of cake, though",
+social_policy: "Anything that is of free-thinking or opinion is destroyed
+or turned. Under the rule of Aku, which does not seem to be all-reaching,
+one is either submissive to him or finds a place to live and act outside
+of his control",
+warmongering_policy: "Aku is an all-powerful shape-shifting demon. He seems
+to be unmatched by all except for Samurai Jack. This said, he seems to send
+hordes of pretty lowly underlings to do everything for him. Sometimes he sends
+a special agent or two. He typically uses his shape-shifting prowess just to 
+screw with people."
+)
+
+t7 = Tyrant.create(name:"Sheldon Plankton",
+bio:"The business rival of Spongebob’s boss Eugene Krabs, who took over Bikini
+ Bottom with the sale of mind-controlling bucket-like helmets in The Spongebob 
+ Squarepants Movie.",
+economics_policy: "Steal the Krabby Patty formula and profit.",
+social_policy: "Totalitarian rule. His formula may be identical to the original,
+but everyone will be eating it. All the time.",
+warmongering_policy: "Coercion and trickery"
+
+t8 = Tyrant.create(name:"Emperor Palpatine",
+bio:"A Sith Lord who served as Senator of the planet Naboo, Supreme Chancellor of 
+the Galactic Republic and Emperor of the Galactic Empire. Possible reference to 
+Hitler's title Chancellor of Germany and Napoleon's transformation to an empire.",
+economics_policy: "War and capitalism in the form of empiricism. Creates an 
+oligarchal structure of profit through war. Gives favor to those that betray their own",
+social_policy: "Kill the jedi. Who gives a crap about everything else.",
+warmongering_policy: "Literally sends the most and the most powerful of everything
+to do anything. Led by idiotic volunteers that can't hit a target. Ever."
+)
+
+t9 = Tyrant.create(name:"Andrew Ryan",
+bio:"Founder of Rapture, Ryan built Rapture as a utopia to remain isolated from the 
+outside world, as well severing connections with outside of the city. However, 
+his rule reaches a climax when rival, Frank Fontaine, defies Ryan's objectives, 
+becoming a catalyst for the civil war in Rapture.",
+economics_policy: "Scientific pursuit and capitalism.",
+social_policy: "Let's make everyone take ridiculous gene-editing drugs and see what
+happens.",
+warmongering_policy: "Let everybody kill each other, basically."
+)
+
+t10 = Tyrant.create(name:"Sauron",
+bio:"The main antagonist of the series, Sauron is the leader of the orc army of 
+Mordor attempting to achieve domination of Middle-Earth, only to be weakened by 
+Isildur. Sauron attempts to regain his ring stolen by Isildur, which later 
+recovered by Bilbo Baggins and in the possession of his nephew Frodo Baggins, 
+to return to power, only to be completely defeated after the ring is dropped 
+into Mount Doom.",
+economics_policy: "The economics of orc/goblin labor and blood.",
+social_policy: "Are you smart? Die.",
+warmongering_policy: "Amass a giant f**king orc army of idiots, have a troupe of 
+ridiculously badass undead warriors, and let them figure it out?"
+)
+
 r1 = Rating.create(appearance_rating: 4,economics_rating: 3, 
 social_rating: 5, warmongering_rating:3, charisma_rating: 3,
 user: u2, tyrant: t1)
@@ -88,11 +150,31 @@ user: u5, tyrant: t4)
 r5 = Rating.create(appearance_rating: 5,economics_rating: 5, 
 social_rating: 5, warmongering_rating:5, charisma_rating: 5,
 user: u4, tyrant: t5)
+r6 = Rating.create(appearance_rating: 4,economics_rating: 3, 
+social_rating: 5, warmongering_rating:3, charisma_rating: 3,
+user: u4, tyrant: t6)
+r7 = Rating.create(appearance_rating: 4,economics_rating: 4, 
+social_rating: 3, warmongering_rating:5, charisma_rating: 2,
+user: u3, tyrant: t7)
+r8 = Rating.create(appearance_rating: 4,economics_rating: 3, 
+social_rating: 5, warmongering_rating:3, charisma_rating: 3,
+user: u2, tyrant: t8)
+r9 = Rating.create(appearance_rating: 2,economics_rating: 2, 
+social_rating: 1, warmongering_rating:2, charisma_rating: 3,
+user: u5, tyrant: t9)
+r10 = Rating.create(appearance_rating: 5,economics_rating: 5, 
+social_rating: 5, warmongering_rating:5, charisma_rating: 5,
+user: u4, tyrant: t10)
 
 c1 = Comment.create(comments:"Dang that boy Zuko go it!",user: u1, tyrant:t1)
 c2 = Comment.create(comments:"This dude sucks",user: u2, tyrant:t2)
 c3 = Comment.create(comments:"He died too young",user: u3, tyrant:t3)
 c4 = Comment.create(comments:"He got what he deserved!",user: u4, tyrant:t4)
 c5 = Comment.create(comments:"He is stone cold!",user: u5, tyrant:t5)
+c6 = Comment.create(comments:"DARN UUU SAMURAIII JAAAACK",user: u1, tyrant:t6)
+c7 = Comment.create(comments:"THE KRABBY PATTY FORMULA SHALL BE MINE",user: u2, tyrant:t7)
+c8 = Comment.create(comments:"We will watch your career with great interest.",user: u3, tyrant:t8)
+c9 = Comment.create(comments:"This dude needs rehab.",user: u4, tyrant:t9)
+c10 = Comment.create(comments:"Literally just an eye that can't do shit without a ring. Come on, bro.",user: u5, tyrant:t10)
 
    
