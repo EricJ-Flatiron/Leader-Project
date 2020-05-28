@@ -3,4 +3,5 @@ class User < ApplicationRecord
     has_many :tyrants, through: :ratings
     has_many :comments
     has_many :tyrants, through: :comments
+    has_secure_password
 end
