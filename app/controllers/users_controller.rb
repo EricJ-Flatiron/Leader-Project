@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
+    
 
-    before_action :current_user, only: [:show, :edit, :update, :destroy]
-
+    # before_action :current_user, only: [:show, :edit, :update, :destroy]
+    skip_before_action :authenticated, only: [:new,:create]
+    # skip_before_action :verify_authenticity_token
     def show
         @tyrants = Tyrant.all
     end
@@ -32,9 +34,9 @@ class UsersController < ApplicationController
 
     private
 
-    def current_user
-        @user = User.find(params[:id])
-    end
+    # def current_user
+    #     @user = User.find(session[:user_id])
+    # end
 
     def user_params
         params.require(:user).permit(:name,:password,:password_confirmation)

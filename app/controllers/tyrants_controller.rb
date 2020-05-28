@@ -2,6 +2,7 @@ class TyrantsController < ApplicationController
     
 
     before_action :current_tyrant, only: [:show,:edit,:update]
+    skip_before_action :authenticated, only: [:new,:create,:index]
 
     def show
         @rating = Rating.new
