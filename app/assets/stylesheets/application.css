@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    background-color: firebrick;
+    font-weight: bold;
+    font-style: normal;
+    color: springgreen;
+  }
+  h1 {
+    font-weight: bold;
+    font-style: normal;
+    color: springgreen;  
+  }
+  label {
+    font-weight: bold;
+    font-style: normal;
+    color: springgreen; 
+  }
