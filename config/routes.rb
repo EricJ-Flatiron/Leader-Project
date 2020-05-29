@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :tyrants, only: [:edit,:update,:new,:create]
   resources :users, only: [ :new, :create,:destroy,:update]
   resources :ratings, only: [:show]
+  get "otherusers/:id", to: "users#otheruser"
   get "/comments", to: "comments#index"
   post "/comments", to: "comments#create"
   get "/ratings", to: "ratings#index"
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
    post "/ratings", to: "ratings#create"
    post "/comments", to: "comments#create"
   end
+ 
   # get "/ratings/:id", to: "ratings#show"
 
   get "/login", to: "login#new"

@@ -13,6 +13,7 @@ class TyrantsController < ApplicationController
 
     def index
         @tyrants = Tyrant.all
+        
     end
 
     def new

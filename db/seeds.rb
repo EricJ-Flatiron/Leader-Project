@@ -23,8 +23,7 @@ joined Aang's companions. He became Firelord after he defeated his sister Azula
 on the day that would have marked the coronation of his sister as Fire Lord.",
 economics_policy: "Money for all",
 social_policy: "Peace for all 4 nations",
-warmongering_policy: "Destruction as a last resort", user: u5
-)
+warmongering_policy: "Destruction as a last resort", user: u5)
 t2 = Tyrant.create(name:"Fire Lord Ozai",
 bio:"Ozai was the Fire Lord and absolute ruler of the Fire Nation during the 
 final years of the Hundred Year War. He was the second son of Fire Lord Azulon 
