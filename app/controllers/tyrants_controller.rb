@@ -2,6 +2,7 @@ class TyrantsController < ApplicationController
     
 
     before_action :current_tyrant, only: [:show,:edit,:update]
+    skip_before_action :authenticated, only: [:new,:create,:index]
 
     def show
         @rating = Rating.new
@@ -43,10 +44,11 @@ class TyrantsController < ApplicationController
         :warmongering_policy,:avatar)
     end
 
-    private
+
 
     def current_tyrant
         @tyrant = Tyrant.find(params[:id])
+        session[:tyrant_id] = @tyrant.id
     end
 
     # def tyrant_params

@@ -2,9 +2,42 @@
 <br>
 <%=@user.name%>
 <br>
-<h3>User Comments Sections</h3>
+<%= button_to "Create Tyrant", '/tyrants/new',method:"get"%>
+<%= button_to "Edit Profile", profile_edit_path, method:"get"%>
+<%= button_to "Home", '/', method:"get"%>
+<%= form_with url:'/logout', method: "delete" do |f|%>
+<%= f.submit "Log Out"%>
+<%end%>
+
+<h3>My Comments</h3>
 <%@user.comments.each do |c|%>
-    <%= Tyrant.find(c.tyrant_id).name %>
+    <ul>
+    <li>
+    <%= link_to c.tyrant.name, tyrant_path(c.tyrant.id)%><br/>
     <%= c.comments%>
-    <br>
+    </li>
+    </ul>
+   
 <% end %>
+<h3>My Reviews</h3>
+<%@user.ratings.each do |x|%>
+    
+    <ul>
+    <li>
+    <%= link_to x.tyrant.name, rating_path(x.id) %><br/>
+    <label>Appearance Rating:</label>
+    <%= x.appearance_rating%><br/>
+    <label>Economics Rating:</label>
+    <%= x.economics_rating%><br/>
+    <label>Social Rating:</label>
+    <%= x.social_rating%><br/>
+    <label>Warmongering Rating:</label>
+    <%= x.warmongering_rating%><br/>
+    <label>Charisma Rating:</label>
+    <%= x.charisma_rating%><br/>
+    </li>
+    </ul>
+    
+    
+<%end%>
+

@@ -10,23 +10,22 @@
 <%= f.label :Tyrant_Picture%>
 <%= f.file_field :avatar%> <br/>
 <%= f.label :name %>
+<br/>
 <%= f.text_field :name %>
 <br/>
-<%= f.label :bio %>
+<%= f.label :bio %><br/>
 <%= f.text_area :bio %>
 <br/>
-<%= f.label :economics_policy %>
+<%= f.label :economics_policy %><br/>
 <%= f.text_area :economics_policy %>
 <br/>
-<%= f.label :warmongering_policy %>
+<%= f.label :warmongering_policy %><br/>
 <%= f.text_area :warmongering_policy %>
 <br/>
-<%= f.label :social_policy %>
+<%= f.label :social_policy %><br/>
 <%= f.text_area :social_policy %>
-<br/>
-<%= f.label :Tyrant_Picture%>
-<%= f.file_field :avatar%>
 <br/>
 <%= f.submit %>
 
 <%end%>
+<%= button_to "Back", '/profile',method:"get"%>

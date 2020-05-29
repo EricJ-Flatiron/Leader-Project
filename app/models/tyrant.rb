@@ -4,6 +4,16 @@ class Tyrant < ApplicationRecord
     has_many :comments
     has_many :users, through: :comments
     has_one_attached :avatar
+    validates :name, length: {minimum: 3}
+    validates :name, uniqueness: true
+    validates :bio, presence: true
+    validates :economics_policy, presence: true
+    validates :warmongering_policy, presence: true
+    validates :social_policy, presence: true
+    validates :avatar, presence: true
+
+
+
 
     def avg_appearance_rating
         sum = 0

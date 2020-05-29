@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
             redirect_to comments_path
         else
             flash[:errors] = @comment.errors.full_messages
+            redirect_to tyrant_path(session[:tyrant_id])
         end
     end
 

@@ -1,0 +1,38 @@
+<%= button_to "My Profile", '/profile',method:"get"%>
+<h1><%= @rating.tyrant.name%></h1>
+<% if @rating.tyrant.avatar.attached? %>
+<%= image_tag (src=(url_for(@rating.tyrant.avatar))),width:"300px"%>
+<%end%>
+<br>
+<h3>Average Ratings:</h3>
+<ul>
+<li>Appearance: </li> <%=@rating.tyrant.avg_appearance_rating%>
+<li>Economic: </li> <%=@rating.tyrant.avg_economics_rating%>
+<li>Social: </li> <%=@rating.tyrant.avg_social_rating%>
+<li>Warmongering: </li> <%=@rating.tyrant.avg_warmongering_rating%>
+<li>Charisma: </li> <%=@rating.tyrant.avg_charisma_rating%>
+</ul>
+<label>Bio </label> 
+<%= simple_format @rating.tyrant.bio%>
+<label>Economics Policy: <label><br/>
+ <%= @rating.tyrant.economics_policy%><br/>
+<br/>
+<label>Social Policy: </label><br/>
+<%= @rating.tyrant.social_policy%><br/>
+<br/>
+<label>Warmongering Policy: </label><br/>
+<%= @rating.tyrant.warmongering_policy%><br/>
+<br/>
+<label>My Rating</label><br/>
+<label>Appearance:</label>
+<%=@rating.appearance_rating%><br/>
+<label>Economics Policy:</label>
+<%=@rating.economics_rating%><br/>
+<label>Social Policy:</label>
+<%=@rating.social_rating%><br/>
+<label>Warmongering Policy:</label>
+<%=@rating.warmongering_rating%><br/>
+<label>Charisma:</label>
+<%=@rating.charisma_rating%>
+
+

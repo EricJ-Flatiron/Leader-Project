@@ -1,0 +1,15 @@
+<%= form_with url:"/login" do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :password %>
+<%= f.password_field :password%>
+<%= f.submit "Login"%>
+<%end%>
+<br/>
+
+<%= button_to "Create Profile", '/users/new',method:"get"%>
+<%= button_to "Back", '/', :method => "get"%>
+
+<% flash.each do |key, msg| %>
+  <p><%= msg %></p>
+<% end %>
