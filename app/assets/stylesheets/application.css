@@ -29,3 +29,9 @@
     font-style: normal;
     color: springgreen; 
   }
+  a:link, a:visited {
+    color: springgreen;
+  }
+  a:hover, a:active {
+    color: turquoise;
+  }
