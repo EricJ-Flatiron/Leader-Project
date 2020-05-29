@@ -13,6 +13,7 @@ class TyrantsController < ApplicationController
 
     def index
         @tyrants = Tyrant.all
+        
     end
 
     def new
@@ -41,7 +42,7 @@ class TyrantsController < ApplicationController
 
     def tyrant_params
         params.require(:tyrant).permit(:name,:bio,:economics_policy,:social_policy,
-        :warmongering_policy,:avatar)
+        :warmongering_policy,:avatar,:user_id)
     end
 
 

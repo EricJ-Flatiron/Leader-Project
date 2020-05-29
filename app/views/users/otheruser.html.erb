@@ -1,20 +1,9 @@
-
-<h1>User Showpage</h1>
-<body>
-<h1><%=@user.name%></h1>
-
-<br>
-
-<br>
-<%= button_to "Create Tyrant", '/tyrants/new',method:"get"%>
-<%= button_to "Edit Profile", profile_edit_path, method:"get"%>
 <%= button_to "Home", '/', method:"get"%>
-<%= form_with url:'/logout', method: "delete" do |f|%>
-<%= f.submit "Log Out"%>
-<%end%>
+<h1><%=@users.name%><h1>
 
-<h3>My Tyrants</h3>
-<%@user.tyrants.each do |x|%>
+
+<h3> <%=@users.name%>'s Tyrants</h3>
+<%@users.tyrants.each do |x|%>
     <ul>
     <li>
     <%= link_to x.name, tyrant_path(x.id)%><br/>
@@ -23,8 +12,8 @@
    
 <% end %>
 
-<h3>My Comments</h3>
-<%@user.comments.each do |c|%>
+<h3><%=@users.name%>'s Comments</h3>
+<%@users.comments.each do |c|%>
     <ul>
     <li>
     <%= link_to c.tyrant.name, tyrant_path(c.tyrant.id)%><br/>
@@ -33,8 +22,8 @@
     </ul>
    
 <% end %>
-<h3>My Reviews</h3>
-<%@user.ratings.each do |x|%>
+<h3><%=@users.name%>'s Reviews</h3>
+<%@users.ratings.each do |x|%>
     
     <ul>
     <li>
@@ -54,4 +43,3 @@
     
     
 <%end%>
-</body>

@@ -6,6 +6,8 @@
         </li>
     <%end%>
 <%end%>
+<%= button_to "Home", '/', method:"get"%>
+
 <h1><%=@tyrant.name%></h1>
 
 <% if @tyrant.avatar.attached? %>
@@ -29,7 +31,13 @@
 <%= @tyrant.social_policy%><br/>
 <br/>
 <label>Warmongering Policy: </label><br/>
-<%= @tyrant.warmongering_policy%><br/>
+<%= @tyrant.warmongering_policy%><br/><br/>
+<label>Created by </label>
+<%if session[:user_id] == @tyrant.user.id%>
+<%=link_to @tyrant.user.name, "/profile"%>
+<%else%>
+<%=link_to @tyrant.user.name, "/otherusers/#{@tyrant.user.id}"%>
+<%end%>
 <br/>
 <%= form_with model:@rating do |f|%>
 <%= f.hidden_field :user_id,:value => session[:user_id]%>
@@ -66,8 +74,15 @@
 <ul>
 <%@tyrant.comments.each do |x|%>
 <li>
+<%if session[:user_id] == x.user.id%>
+<%=link_to x.user.name, "/profile"%>
+<%else%>
+<%=link_to x.user.name, "/otherusers/#{x.user.id}"%>
+<%end%>
+<br/>
  <%=x.comments%>
  </li>
+ 
  <%end%>
  </ul>
  </body>
