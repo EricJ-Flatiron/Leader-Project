@@ -23,7 +23,7 @@ joined Aang's companions. He became Firelord after he defeated his sister Azula
 on the day that would have marked the coronation of his sister as Fire Lord.",
 economics_policy: "Money for all",
 social_policy: "Peace for all 4 nations",
-warmongering_policy: "Destruction as a last resort"
+warmongering_policy: "Destruction as a last resort", user: u5
 )
 t2 = Tyrant.create(name:"Fire Lord Ozai",
 bio:"Ozai was the Fire Lord and absolute ruler of the Fire Nation during the 
@@ -36,7 +36,7 @@ only son, Lu Ten, died, Ozai usurped his brother's birthright to the throne
 in a scheme that resulted in his father's death and Ursa's banishment.",
 economics_policy: "Everything nad anything for the Fire Nation.",
 social_policy: "Join us or die to us",
-warmongering_policy: "Destructio is key to take over the nations!"
+warmongering_policy: "Destructio is key to take over the nations!", user: u4
 )
 
 t3 = Tyrant.create(name:"Tywin Lannister",
@@ -47,7 +47,7 @@ Cersei, Jaime, and Tyrion Lannister, and sole grandfather of the incest-born
 Joffrey, Myrcella, and Tommen Baratheon.",
 economics_policy: "A Lannister always pays his debts",
 social_policy: "Only highborn matter",
-warmongering_policy: "Strike down all who oppose the Lannisters"
+warmongering_policy: "Strike down all who oppose the Lannisters", user: u1
 )
 
 t4 = Tyrant.create(name:"Joffrey Lannisters",
@@ -61,7 +61,7 @@ her twin brother Jaime Lannister. He is the older brother of Myrcella and
 Tommen Baratheon.",
 economics_policy: "All the money is for me!",
 social_policy: "All i care about is me!",
-warmongering_policy: "Kill them all!"
+warmongering_policy: "Kill them all!", user: u2
 )
 
 t5 = Tyrant.create(name:"Night King",
@@ -70,7 +70,7 @@ having existed since the age of the First Men. He was also the supreme
 leader of the Army of the Dead.",
 economics_policy: "Humans must die!",
 social_policy: "Humans must die!",
-warmongering_policy: "Kill all the humans!"
+warmongering_policy: "Kill all the humans!", user: u5
 )
 
 t6 = Tyrant.create(name:"Aku",
@@ -88,7 +88,7 @@ warmongering_policy: "Aku is an all-powerful shape-shifting demon. He seems
 to be unmatched by all except for Samurai Jack. This said, he seems to send
 hordes of pretty lowly underlings to do everything for him. Sometimes he sends
 a special agent or two. He typically uses his shape-shifting prowess just to 
-screw with people."
+screw with people.", user: u4
 )
 
 t7 = Tyrant.create(name:"Sheldon Plankton",
@@ -98,7 +98,7 @@ bio:"The business rival of Spongebob’s boss Eugene Krabs, who took over Bikini
 economics_policy: "Steal the Krabby Patty formula and profit.",
 social_policy: "Totalitarian rule. His formula may be identical to the original,
 but everyone will be eating it. All the time.",
-warmongering_policy: "Coercion and trickery"
+warmongering_policy: "Coercion and trickery", user: u3)
 
 t8 = Tyrant.create(name:"Emperor Palpatine",
 bio:"A Sith Lord who served as Senator of the planet Naboo, Supreme Chancellor of 
@@ -108,7 +108,7 @@ economics_policy: "War and capitalism in the form of empiricism. Creates an
 oligarchal structure of profit through war. Gives favor to those that betray their own",
 social_policy: "Kill the jedi. Who gives a crap about everything else.",
 warmongering_policy: "Literally sends the most and the most powerful of everything
-to do anything. Led by idiotic volunteers that can't hit a target. Ever."
+to do anything. Led by idiotic volunteers that can't hit a target. Ever.", user: u2
 )
 
 t9 = Tyrant.create(name:"Andrew Ryan",
@@ -119,7 +119,7 @@ becoming a catalyst for the civil war in Rapture.",
 economics_policy: "Scientific pursuit and capitalism.",
 social_policy: "Let's make everyone take ridiculous gene-editing drugs and see what
 happens.",
-warmongering_policy: "Let everybody kill each other, basically."
+warmongering_policy: "Let everybody kill each other, basically.",user: u1
 )
 
 t10 = Tyrant.create(name:"Sauron",
@@ -132,7 +132,7 @@ into Mount Doom.",
 economics_policy: "The economics of orc/goblin labor and blood.",
 social_policy: "Are you smart? Die.",
 warmongering_policy: "Amass a giant f**king orc army of idiots, have a troupe of 
-ridiculously badass undead warriors, and let them figure it out?"
+ridiculously badass undead warriors, and let them figure it out?",user: u1
 )
 
 r1 = Rating.create(appearance_rating: 4,economics_rating: 3, 
@@ -166,7 +166,7 @@ r10 = Rating.create(appearance_rating: 5,economics_rating: 5,
 social_rating: 5, warmongering_rating:5, charisma_rating: 5,
 user: u4, tyrant: t10)
 
-c1 = Comment.create(comments:"Dang that boy Zuko go it!",user: u1, tyrant:t1)
+c1 = Comment.create(comments:"Dang that boy Zuko got it!",user: u1, tyrant:t1)
 c2 = Comment.create(comments:"This dude sucks",user: u2, tyrant:t2)
 c3 = Comment.create(comments:"He died too young",user: u3, tyrant:t3)
 c4 = Comment.create(comments:"He got what he deserved!",user: u4, tyrant:t4)

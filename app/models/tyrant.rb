@@ -4,13 +4,14 @@ class Tyrant < ApplicationRecord
     has_many :comments
     has_many :users, through: :comments
     has_one_attached :avatar
+    belongs_to :user
     validates :name, length: {minimum: 3}
     validates :name, uniqueness: true
     validates :bio, presence: true
     validates :economics_policy, presence: true
     validates :warmongering_policy, presence: true
     validates :social_policy, presence: true
-    validates :avatar, presence: true
+    # validates :avatar, presence: true
 
 
 
