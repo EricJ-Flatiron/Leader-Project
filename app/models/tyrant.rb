@@ -21,7 +21,7 @@ class Tyrant < ApplicationRecord
         self.ratings.each do |r|
             sum += r.appearance_rating
         end
-        sum.to_f/self.ratings.length.to_f
+        (sum.to_f/self.ratings.length.to_f).round(2)
     end 
 
     def avg_economics_rating
@@ -29,7 +29,7 @@ class Tyrant < ApplicationRecord
         self.ratings.each do |r|
             sum += r.economics_rating
         end
-        sum.to_f/self.ratings.length.to_f
+        (sum.to_f/self.ratings.length.to_f).round(2)
     end
 
     def avg_social_rating
@@ -37,7 +37,7 @@ class Tyrant < ApplicationRecord
         self.ratings.each do |r|
             sum += r.social_rating
         end
-        sum.to_f/self.ratings.length.to_f
+        (sum.to_f/self.ratings.length.to_f).round(2)
     end
 
     def avg_warmongering_rating
@@ -45,7 +45,7 @@ class Tyrant < ApplicationRecord
         self.ratings.each do |r|
             sum += r.warmongering_rating
         end
-        sum.to_f/self.ratings.length.to_f
+        (sum.to_f/self.ratings.length.to_f).round(2)
     end
 
     def avg_charisma_rating
@@ -53,6 +53,6 @@ class Tyrant < ApplicationRecord
         self.ratings.each do |r|
             sum += r.charisma_rating
         end
-        sum.to_f/self.ratings.length.to_f
+        (sum.to_f/self.ratings.length.to_f).round(2)
     end
 end
