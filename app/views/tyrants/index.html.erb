@@ -6,6 +6,12 @@
 <%= f.submit "Log Out"%>
 <%end%>
 <%end%>
+
+<%if session[:user_id] == nil%>
+<%= button_to "Create Profile", '/users/new',method:"get"%>
+<%else%>
+<%= button_to "My Profile", '/profile',method:"get"%>
+<%end%>
 <br>
 <!-- Iterate through all the Tyrants -->
 <ul>

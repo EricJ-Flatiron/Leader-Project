@@ -7,7 +7,7 @@ class RatingsController < ApplicationController
         @rating = Rating.new(rating_params)
         if @rating.valid?
             @rating.save
-            redirect_to ratings_path
+            redirect_to rating_path(@rating)
         else
             flash[:errors] = @rating.errors.full_messages
             redirect_to tyrant_path(session[:tyrant_id])
