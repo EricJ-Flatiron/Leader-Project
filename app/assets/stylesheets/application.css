@@ -28,6 +28,7 @@
   label {
     font-weight: bold;
     font-style: normal;
+<<<<<<< HEAD
     color: ivory; 
   }
   a:link, a:visited {
@@ -36,3 +37,13 @@
   a:hover, a:active {
     color: turquoise;
   }
+=======
+    color: springgreen; 
+  }
+  a:link, a:visited {
+    color: springgreen;
+  }
+  a:hover, a:active {
+    color: turquoise;
+  }
+>>>>>>> 9a3750328ba1cb3626def131c81bac9537d255bc
