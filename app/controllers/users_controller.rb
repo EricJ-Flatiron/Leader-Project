@@ -34,6 +34,10 @@ class UsersController < ApplicationController
     def destroy
     end
 
+    def otheruser
+        @users = User.find(params[:id])
+    end
+
     private
 
     # def current_user
