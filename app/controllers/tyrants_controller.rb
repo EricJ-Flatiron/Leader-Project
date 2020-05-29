@@ -44,10 +44,11 @@ class TyrantsController < ApplicationController
         :warmongering_policy,:avatar)
     end
 
-    private
+
 
     def current_tyrant
         @tyrant = Tyrant.find(params[:id])
+        session[:tyrant_id] = @tyrant.id
     end
 
     # def tyrant_params

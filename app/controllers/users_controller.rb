@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         user = User.new(user_params)
         if user.valid?
             user.save
-            redirect_to user
+            redirect_to '/profile'
         else
             flash[:errors] = user.errors.full_messages 
             redirect_to "/users/new"

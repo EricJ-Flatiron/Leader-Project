@@ -1,3 +1,10 @@
+<% if flash[:errors]%>
+    <% flash[:errors].each do |e| %>
+        <li style="color: red">
+            <%= e %>
+        </li>
+    <%end%>
+<%end%>
 <h1><%=@tyrant.name%></h1>
 <% if @tyrant.avatar.attached? %>
 <%= image_tag (src=(url_for(@tyrant.avatar))),width:"300px"%>
@@ -16,42 +23,38 @@
 <br>
 
 
-<label>Put in your own rating for this Tyrant!</label>
+
 <%= form_with model:@rating do |f|%>
 <br/>
-<label>Bio: <%= simple_format @tyrant.bio%></label> 
-<br>
-<label>Appearance Rating </label>
-<%= f.number_field :appearance_rating%>
-<br>
-<label>Economics Policy: </label>
- <%= @tyrant.economics_policy%>
+<label>Bio </label> 
+<%= simple_format @tyrant.bio%>
+<label>Economics Policy: <label><br/>
+ <%= @tyrant.economics_policy%><br/>
 <br/>
-<label>Economics Rating </label>
-<%= f.number_field :economics_rating%>
-<br/> <br/>
-<label>Social Policy: <%= @tyrant.social_policy%></label>
+<label>Social Policy: </label><br/>
+<%= @tyrant.social_policy%><br/>
 <br/>
-<label>Social Rating </label>
-<%= f.number_field :social_rating%>
-<br/>
-<br/>
-<label>Warmongering Policy: <%= @tyrant.warmongering_policy%></label>
-<br/>
-<label>Warmongering Rating </label>
-<%= f.number_field :warmongering_rating%>
-<br/>
-<br/>
-<label>Charisma Rating </label>
-<%= f.number_field :charisma_rating%>
+<label>Warmongering Policy: </label><br/>
+<%= @tyrant.warmongering_policy%><br/>
 <br/>
 <%= f.hidden_field :user_id,:value => session[:user_id]%>
 <br/>
 <%= f.hidden_field :tyrant_id,:value => @tyrant.id%>
+<label>Put in your own rating for this Tyrant!</label><br/>
+<%= f.number_field :appearance_rating%>
+<label>Appearance Rating </label>
 <br/>
+<%= f.number_field :economics_rating%>
+<label>Economics Rating </label><br/>
+<%= f.number_field :social_rating%>
+<label>Social Rating </label><br/>
+<%= f.number_field :warmongering_rating%>
+<label>Warmongering Rating </label><br/>
+<%= f.number_field :charisma_rating%>
+<label>Charisma Rating </label><br/>
 <%= f.submit%>
 <%end%>
-<br/>
+<br/><br/>
 
 <label>Leave a comment about this Tyrant:</label>
 <%= form_with model:@comment do |f|%><br/>

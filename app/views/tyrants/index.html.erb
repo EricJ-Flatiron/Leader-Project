@@ -1,4 +1,11 @@
 <h1>Tyrant's Parking Lot</h1>
+<% if session[:user_id] == nil%>
+<%= button_to "Log In", '/login'%>
+<%else%>
+<%= form_with url:'/logout', method: "delete" do |f|%>
+<%= f.submit "Log Out"%>
+<%end%>
+<%end%>
 <br>
 <!-- Iterate through all the Tyrants -->
 <ul>
