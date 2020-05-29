@@ -5,6 +5,12 @@
         </li>
     <%end%>
 <%end%>
+<%if session[:user_id] == @tyrant.user.id%>
+<%= button_to "Edit", edit_tyrant_path, method:"get"%>
+<%else%>
+<%nil%>
+<%end%>
+
 <%= button_to "Home", '/', method:"get"%>
 
 <h1><%=@tyrant.name%></h1>
