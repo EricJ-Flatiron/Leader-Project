@@ -13,7 +13,7 @@ class TyrantsController < ApplicationController
 
     def index
         @tyrants = Tyrant.all
-        
+        # @tyrants = @tyrants.sort_by{|x| x.over_all_rating}
     end
 
     def new

@@ -14,18 +14,25 @@
  *= require_self
  */
  body {
-    background-color: firebrick;
+    background-image: url("firepattern.jpg");
     font-weight: bold;
     font-style: normal;
-    color: springgreen;
+    color: ivory;
+    text-align: center;
   }
   h1 {
     font-weight: bold;
     font-style: normal;
-    color: springgreen;  
+    color: ivory;  
   }
   label {
     font-weight: bold;
     font-style: normal;
-    color: springgreen; 
+    color: ivory; 
+  }
+  a:link, a:visited {
+    color: ivory;
+  }
+  a:hover, a:active {
+    color: turquoise;
   }

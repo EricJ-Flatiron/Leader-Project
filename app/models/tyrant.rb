@@ -55,4 +55,9 @@ class Tyrant < ApplicationRecord
         end
         (sum.to_f/self.ratings.length.to_f).round(2)
     end
+
+    def over_all_rating
+        a = self.avg_appearance_rating + self.avg_warmongering_rating + self.avg_social_rating + self.avg_economics_rating + self.avg_charisma_rating
+        a / 5.0
+    end
 end
