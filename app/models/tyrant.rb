@@ -10,7 +10,7 @@ class Tyrant < ApplicationRecord
     validates :economics_policy, presence: true
     validates :warmongering_policy, presence: true
     validates :social_policy, presence: true
-    validates :avatar, presence: true
+    # validates :avatar, presence: true
 
 
 
