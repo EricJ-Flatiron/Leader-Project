@@ -99,6 +99,7 @@ social_policy: "Totalitarian rule. His formula may be identical to the original,
 but everyone will be eating it. All the time.",
 warmongering_policy: "Coercion and trickery", user: u3)
 
+
 t8 = Tyrant.create(name:"Emperor Palpatine",
 bio:"A Sith Lord who served as Senator of the planet Naboo, Supreme Chancellor of 
 the Galactic Republic and Emperor of the Galactic Empire. Possible reference to 
