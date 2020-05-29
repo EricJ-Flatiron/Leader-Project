@@ -1,3 +1,4 @@
+<body>
 <%= form_with url:"/login" do |f|%>
 <%= f.label :name %>
 <%= f.text_field :name %>
@@ -13,3 +14,4 @@
 <% flash.each do |key, msg| %>
   <p><%= msg %></p>
 <% end %>
+</body>

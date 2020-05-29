@@ -1,5 +1,6 @@
 <%= button_to "My Profile", '/profile',method:"get"%>
 <h1><%= @rating.tyrant.name%></h1>
+<body>
 <% if @rating.tyrant.avatar.attached? %>
 <%= image_tag (src=(url_for(@rating.tyrant.avatar))),width:"300px"%>
 <%end%>
@@ -34,5 +35,6 @@
 <%=@rating.warmongering_rating%><br/>
 <label>Charisma:</label>
 <%=@rating.charisma_rating%>
+</body>
 
 
