@@ -6,6 +6,7 @@
     <%end%>
 <%end%>
 <h1><%=@tyrant.name%></h1>
+
 <% if @tyrant.avatar.attached? %>
 <%= image_tag (src=(url_for(@tyrant.avatar))),width:"300px"%>
 <%end%>
